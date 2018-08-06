@@ -142,8 +142,8 @@ body {
   /*box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);*/ }
   @media (max-width: 575px) {
     .modal {
-      width: 85%;
-      height: 80%; } }
+      width: 100%;
+      height: 100%; } }
 
 .modal-header {
   height: 70px;
