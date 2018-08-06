@@ -1,0 +1,173 @@
+@font-face {
+  font-family: brandon-grotesque;
+  font-weight: bold;
+  src: url("../fonts/brandon-grotesque-bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: brandon-grotesque;
+  font-weight: bolder;
+  src: url("../fonts/brandon-grotesque-black.otf") format("opentype"); }
+
+@font-face {
+  font-family: brandon-light;
+  font-weight: lighter;
+  src: url("../fonts/BRANDON_LIGHT.OTF") format("opentype"); }
+
+@font-face {
+  font-family: brandon-light-it;
+  font-weight: lighter;
+  src: url("../fonts/BRANDON_LIGHT_IT.OTF") format("opentype"); }
+
+@font-face {
+  font-family: avenir-next-lt-pro;
+  font-weight: lighter;
+  src: url("../fonts/avenir-next-lt-pro-regular.otf") format("opentype"); }
+
+@font-face {
+  font-family: avenir-next-lt-pro;
+  font-weight: normal;
+  src: url("../fonts/avenir-next-lt-pro-medium.otf") format("opentype"); }
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: rgba(98, 187, 201, 0.7);
+  transition: all ease .3s; }
+
+.modal {
+  /* This way it could be display flex or grid or whatever also. */
+  display: none;
+  /* Probably need media queries here */
+  width: 768px;
+  max-width: 100%;
+  height: 500px;
+  max-height: 100%;
+  z-index: 1010;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  /* Use this for centering if unknown width/height */
+  transform: translate(-50%, -50%);
+  /* If known, negative margins are probably better (less chance of blurry text). */
+  /* margin: -200px 0 0 -200px; */
+  background: white;
+  /*box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);*/ }
+  @media (max-width: 575px) {
+    .modal {
+      width: 85%;
+      height: 80%; } }
+
+.modal-header {
+  height: 70px;
+  width: 100%;
+  padding: 0px 20px;
+  font-family: avenir-next-lt-pro;
+  font-size: 1.2rem;
+  /*background-color: $gray-lighter;*/
+  border-bottom: 1px solid #191919;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.modal-guts {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  overflow: auto;
+  padding: 10px 50px 20px 20px;
+  font-family: avenir-next-lt-pro;
+  font-weight: lighter; }
+
+.closed {
+  display: none; }
+
+.show {
+  display: block; }
+
+.modal-close {
+  text-decoration: none;
+  color: #B8BABC; }
+  .modal-close:hover {
+    color: #323232; }
+
+.active {
+  animation: scale-display .3s;
+  display: block; }
+
+.out {
+  animation: scale-display--reversed .3s;
+  animation-fill-mode: forwards;
+  display: none; }
+
+@keyframes scale-display {
+  0% {
+    display: none;
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    display: block; } }
+
+@keyframes scale-display--reversed {
+  0% {
+    display: block;
+    opacity: 1; }
+  100% {
+    display: none;
+    opacity: 0; } }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-size: 16px; }
+
+#portada {
+  background: url("../imagenes/crucero-bg.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  @media (max-width: 575px) {
+    #portada {
+      background: url("../imagenes/crucero-bg-movil.jpg") no-repeat left top;
+      /*background-size: auto;*/ } }
+  #portada .main {
+    margin-left: 42%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    #portada .main h3 {
+      font-family: brandon-light,'helvetica';
+      font-size: 1.75rem;
+      color: #23272b;
+      text-align: center;
+      line-height: 110%; }
+    #portada .main .logo {
+      width: 263px;
+      height: 185px;
+      margin: 24px 0px; }
+      #portada .main .logo img {
+        max-width: 100%; }
+    #portada .main a {
+      font-family: brandon-grotesque;
+      color: #191919;
+      font-weight: bolder;
+      font-size: 1.75rem;
+      margin-top: 24px; }
+      #portada .main a:hover {
+        color: #343a40; }
+    @media (max-width: 575px) {
+      #portada .main {
+        margin-left: 0px; } }
+
+.modal-guts ul li p {
+  margin: 0px;
+  padding: 0px; }
