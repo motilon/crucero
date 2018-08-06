@@ -28,6 +28,77 @@
   font-weight: normal;
   src: url("../fonts/avenir-next-lt-pro-medium.otf") format("opentype"); }
 
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 100%;
+  background: #f5f5f5; }
+  @media (max-width: 575px) {
+    html {
+      font-size: 80%; } }
+
+body {
+  margin: 0px; }
+
+#portada {
+  background: url("../imagenes/crucero-bg.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  @media (max-width: 575px) {
+    #portada {
+      background: url("../imagenes/crucero-bg-movil.jpg") no-repeat left top;
+      height: auto;
+      padding: 50px 0;
+      /*background-size: auto;*/ } }
+  #portada .main {
+    margin-left: 42%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    @media (max-width: 575px) {
+      #portada .main {
+        margin-left: 0px; } }
+    #portada .main h3 {
+      font-family: brandon-light,'helvetica';
+      font-size: 1.75rem;
+      color: #23272b;
+      text-align: center;
+      line-height: 110%; }
+      @media (max-width: 575px) {
+        #portada .main h3 {
+          margin-top: 0px; } }
+    #portada .main .logo {
+      width: 263px;
+      height: 185px;
+      margin: 24px 0px; }
+      @media (max-width: 575px) {
+        #portada .main .logo {
+          margin: 18px 0px 24px;
+          width: 230px;
+          height: auto; } }
+      #portada .main .logo img {
+        max-width: 100%; }
+    #portada .main a {
+      font-family: brandon-grotesque;
+      color: #191919;
+      font-weight: bolder;
+      font-size: 1.75rem;
+      margin-top: 24px; }
+      @media (max-width: 575px) {
+        #portada .main a {
+          margin-top: 18px; } }
+      #portada .main a:hover {
+        color: #343a40; }
+
+.modal-guts ul li p {
+  margin: 0px;
+  padding: 0px; }
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -80,7 +151,7 @@
   width: 100%;
   height: 80%;
   overflow: auto;
-  padding: 10px 50px 20px 20px;
+  padding: 10px 40px 20px 20px;
   font-family: avenir-next-lt-pro;
   font-weight: lighter; }
 
@@ -120,54 +191,3 @@
   100% {
     display: none;
     opacity: 0; } }
-
-* {
-  box-sizing: border-box; }
-
-body {
-  font-size: 16px; }
-
-#portada {
-  background: url("../imagenes/crucero-bg.jpg") no-repeat center center;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-  @media (max-width: 575px) {
-    #portada {
-      background: url("../imagenes/crucero-bg-movil.jpg") no-repeat left top;
-      /*background-size: auto;*/ } }
-  #portada .main {
-    margin-left: 42%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; }
-    #portada .main h3 {
-      font-family: brandon-light,'helvetica';
-      font-size: 1.75rem;
-      color: #23272b;
-      text-align: center;
-      line-height: 110%; }
-    #portada .main .logo {
-      width: 263px;
-      height: 185px;
-      margin: 24px 0px; }
-      #portada .main .logo img {
-        max-width: 100%; }
-    #portada .main a {
-      font-family: brandon-grotesque;
-      color: #191919;
-      font-weight: bolder;
-      font-size: 1.75rem;
-      margin-top: 24px; }
-      #portada .main a:hover {
-        color: #343a40; }
-    @media (max-width: 575px) {
-      #portada .main {
-        margin-left: 0px; } }
-
-.modal-guts ul li p {
-  margin: 0px;
-  padding: 0px; }

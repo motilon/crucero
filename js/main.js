@@ -3,6 +3,8 @@ var modalOverlay = document.querySelector("#modal-overlay");
 var closeButton = document.querySelector("#close-button");
 var openButton = document.querySelector("#open-button");
 
+alert('Resolución: ' + screen.width + ' x ' + screen.height);
+
 modalOverlay.addEventListener("click", function (e) {
     e.preventDefault();
     modal.classList.remove("active");
