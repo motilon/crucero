@@ -37,6 +37,9 @@ html {
   @media (max-width: 640px) {
     html {
       font-size: 80%; } }
+  @media (max-width: 320px) {
+    html {
+      font-size: 70%; } }
 
 body {
   margin: 0px; }
@@ -54,6 +57,11 @@ body {
       height: auto;
       padding: 50px 0;
       /*background-size: auto;*/ } }
+  @media (max-width: 320px) {
+    #portada {
+      background: url("../imagenes/crucero-bg-movil.jpg") no-repeat left top;
+      height: auto;
+      padding: 40px 0; } }
   #portada .main {
     margin-left: 42%;
     display: flex;
@@ -80,6 +88,11 @@ body {
         #portada .main .logo {
           margin: 18px 0px 24px;
           width: 230px;
+          height: auto; } }
+      @media (max-width: 320px) {
+        #portada .main .logo {
+          margin: 18px 0px 24px;
+          width: 215px;
           height: auto; } }
       #portada .main .logo img {
         max-width: 100%; }
